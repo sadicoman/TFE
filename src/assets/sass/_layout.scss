@@ -10,10 +10,12 @@
 .section:last-child{
     margin-bottom: 72px;
 }
-.main, .grid--footer, .header{
+.main, .header, .footer{
 	max-width: 450px;
 	margin: auto;
 }
+
+/* BTN */
 .btn{
 	width: 100%;
 	position: relative;
@@ -22,7 +24,7 @@
     margin-top: 18px;
     background-color: var(--color-primary);
 	color: var(--color-on-primary);
-    padding: 20px 20px 25px 20px;
+    padding: 20px 20px 20px 20px;
 	font-size: 1.2em;
 	text-align: center;
 	letter-spacing: 1.3px;
@@ -31,12 +33,13 @@
 	position: absolute;
 	z-index: 10;
 }
-.btn__span::after {
+.btn__span{
+	display: flex;
+    align-items: center;
+}
+.btn__span--icone::after {
 	content: url(../images/pioche.png);
 	padding-left: 15px;
-}
-.btn__span:hover::after {
-	content: url(../images/pioche_hover.png);
 }
 .btn__el--haut:hover, .btn__el--haut:focus{
 	transform: translate(10px, 10px);
@@ -44,17 +47,25 @@
 	color: var(--color-on-secondary);
 	transition-duration: .2s;
 	transition-timing-function: ease-out;
+		
+	.btn__span--icone:after {
+		content: url(../images/pioche_hover.png);
+	}
 }
 .btn__el--bas{
 	position: absolute;
+	margin-top: 18px;
 	background-color: var(--color-secondary);
-	width: 215px;
-	height: 37px;
+	// width: 215px;
+	// height: 37px;
 	top: 10px;
 	left: 10px;
-}
+} 
+
+
 .logo--dwt{
 	width: 50%;
+	cursor: pointer;
 }
 
 
@@ -73,17 +84,18 @@
 	.svg--mb{
 		display: none;
 	}
-	.main, .grid--footer, .header{
+	.main, .footer, .header{
 		max-width: 1440px;
 		margin: auto;
 	}	
-	.btn__el--bas{
-		width: 239px;
-		height: 38px;
-		top: 10px;
-		left: 10px;
-	}
 	.logo--dwt {
 		width: 30%;
+	}
+	.footer{
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 30px;
+		position: relative;
+    	bottom: 95px;
 	}
 }
