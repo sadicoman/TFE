@@ -130,7 +130,7 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 30px;
-        align-items: center;
+        align-items: flex-start;
     }
     .grid--footer {
         padding: 0px;
@@ -194,4 +194,12 @@
     // .pgridRow-start1{
     //     grid-row-start: 1;
     // }
+}
+
+@media (min-width: 1440px) and (min-height: 700px) { 
+	
+}
+
+@media (min-width: 1440px) and (min-height: 900px) { 
+    
 }

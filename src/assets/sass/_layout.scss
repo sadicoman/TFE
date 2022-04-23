@@ -100,3 +100,27 @@
     	bottom: 95px;
 	}
 }
+
+
+@media (min-width: 1440px) and (min-height: 700px) { 
+	.svg--pc{
+		max-height: 535px;
+		width: auto;
+	}
+	.footer{
+    	bottom: 20px;
+	}
+	.header__img{
+		width: 200px;
+	}
+}
+
+@media (min-width: 1440px) and (min-height: 900px) { 
+    .svg--pc{
+		max-height: 100%;
+		width: auto;
+	}
+	.footer{
+    	bottom: 95px;
+	}
+}
